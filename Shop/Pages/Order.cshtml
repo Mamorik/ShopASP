@@ -1,0 +1,41 @@
+﻿@page "{id:int}"
+@model Shop.Pages.OrderModel
+
+<form method="post" style="margin-top:20%;">
+    <div class="container">
+
+        <div class="product-details-content">
+            <div class="col-md-6 col-sm-6">
+                <div class="product-img-box">
+                    <a id="image-view">
+                        <img id="image" src="@Model.Product.imageProdusct" alt="Product">
+                    </a>
+                </div>
+                <!-- End product-img-box -->
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="product-name space-30">
+                    <h1>@Model.Product.nameProduct</h1>
+                    <p>
+                       @Model.Product.detailProduct
+                    </p>
+                </div>
+                <!-- End product-name -->
+                </div>
+                <!-- End Rating -->
+                <div class="wrap-price space-30 space-padding-tb-30">
+                    <p class="price">$ @Model.Product.priceProduct</p>
+                </div>
+                <!-- End Price -->
+
+                <!-- End Options -->
+                <div class="products">
+                    <div class="product product-details">
+                        <a asp-page="/Oplata" asp-route-id="@Model.Product.idProduct" class="add-to-cart"><b>Купить</b></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End product-details-content -->
+        <!-- tab-container -->
+    </form>

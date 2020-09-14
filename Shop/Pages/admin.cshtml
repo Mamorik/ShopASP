@@ -1,0 +1,62 @@
+﻿@page
+@model Shop.Pages.adminModel
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+</head>
+<body>
+    <div class="main-content space-80" style="margin-top:20%;">
+        <div class="container">
+
+            <!-- End Banner Grid -->
+            <div class="ordering">
+                <a asp-page="/AddProduct" title="show sidebar">Add new product</a>
+                <span class="list"></span>
+                <span class="col active"></span>
+            </div>
+            <!-- End ordering -->
+        </div>
+        <!-- End container -->
+        <div class="products grid_full">
+            <div class="container">
+                @{
+                    foreach (var car in Model.Product)
+                    {
+                        <div class="item-inner">
+                            <div class="product">
+                                <a class="product-images" asp-page="/Order" asp-route-id="@car.idProduct" title="">
+                                    <img class="primary_image" src="@car.imageProdusct" alt="" />
+                                    <img class="secondary_image" src="@car.imageProdusct" alt="" />
+                                </a>
+                                <p class="product-title">@car.nameProduct</p>
+                                <p class="description">@car.detailProduct</p>
+                                <p class="product-price">$ @car.priceProduct</p>
+                                <a class="add-to-cart" asp-page="/Order" asp-route-id="@car.idProduct">Подробнее</a>
+                                <div class="action">
+                                    <form method="post" asp-action="Delete">
+                                        <a asp-page="/Edit" asp-route-id="@car.idProduct"><img src="~/assets/images/edit.jpg" width="20" height="20" alt="Banner-Blog-Page"></a>
+                                        <a><button type="submit" asp-page-handler="delete" asp-route-id="@car.idProduct">
+                                                <img src="https://img.icons8.com/metro/26/000000/delete-sign.png" />
+                                        </button>
+                                        </a>
+                                    </form>
+                              
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                }
+
+
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End product-content products  -->
+    </div>
+</body>
+</html>

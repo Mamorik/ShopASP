@@ -1,0 +1,24 @@
+﻿@page "{id:int}"
+@model Shop.Pages.OplataModel
+
+@{
+    ViewBag.Title = "Страница оплаты";
+}
+<h2 style="margin-top:20%;">Оплата товара "@Model.Product.nameProduct"</h2>
+<div>
+    <form method="POST" action="https://money.yandex.ru/quickpay/confirm.xml">
+        <input name="label" value="@Model.Product.idProduct" type="hidden">
+        <input name="receiver" value="4100115419954862" type="hidden">
+        <input name="quickpay-form" value="shop" type="hidden">
+        <input type="hidden" name="targets" value="Оплата заказа @Model.Product.nameProduct">
+        <label for="sum">Сумма: </label><br />
+        <input name="sum" value="@Model.Product.priceProduct" maxlength="10" data-type="number" type="text"><br /><br />
+        <label for="sum">Способ оплаты: </label><br />
+        <input type="radio" name="paymentType" value="PC">Яндекс.Деньгами
+        <input type="radio" name="paymentType" value="AC">Банковской картой
+        <input type="radio" name="paymentType" value="2S">Сбербанк онлайн
+        <input type="submit" name="submit-button" value="Оплатить">
+        <input name="successURL" value="http://mystore.somee.com/Home/Paid" type="hidden">
+        <input name="quickpay-back-url" value="http://mystore.somee.com/" type="hidden">
+    </form>
+</div>

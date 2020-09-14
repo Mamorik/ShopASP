@@ -1,0 +1,83 @@
+﻿@page
+@model Shop.Pages.RegistrationModel
+
+
+
+<div class="container" style="margin-top:20%;">
+
+    <div class="row">
+
+        <div class="contact-form check-out acc-login">
+
+            <h1 class="text-center" >Registration</h1>
+            <form id="contact-form" method="post" class="form-horizontal">
+
+                <div class="messages"></div>
+
+                <div class="controls" style="margin-top:50px;">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_password">Login *</label>
+                                <input id="form_password" asp-for="person.loginUser" class="form-control" placeholder="Please enter your Login" required="required" data-error="Login is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_Password">Password *</label>
+                                <input id="form_Password" asp-for="person.passwordUser" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Password is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_lastname">LastName *</label>
+                                <input id="form_lastname" asp-for="person.lastNameUser" class="form-control" placeholder="Please enter your LastName *" required="required" data-error="LastName is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_name">Firstname *</label>
+                                <input id="form_name" asp-for="person.firstNameUser" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="form_email">Email *</label>
+                                <input id="form_email" asp-for="person.mailUser" type="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="secondname">SecondName *</label>
+                                <input asp-for="person.secondNameUser" id="secondname" class="form-control" placeholder="Please enter your SecodName *" rows="4" required="required" data-error="SecodName is required.">
+                                <div class="help-block with-errors"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="align-content:center;">
+                            <div class="form-group">
+                                <input type="submit" class="btn link-button link-button-v2" value="Register">
+                            </div>
+                            <div class="form-group">
+                                <a class="btn link-button link-button-v2" asp-page="/Authorization" title="Checkout as guest">Log in</a>
+                            </div>
+                        </div>
+                    </div>
+                        
+                        </div>
+</form>
+
+        </div><!-- /.col-lg-8 col-lg-offset-2 -->
+
+    </div> <!-- /.row-->
+
+</div> <!-- /.container-->

@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/owl-slider.css" />
+    <link rel="stylesheet" type="text/css" href="~/assets/vendor/settings.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header id="header" class="header-v1 fixed">
+        <div id="topbar">
+            <div class="container">
+                <!-- End topBar-left -->
+                <!-- End topbar-right -->
+                <!-- End Social -->
+            </div>
+            <!-- End container -->
+        </div>
+        <!-- End Top Bar -->
+        <div class="header-top">
+            <div class="container">
+                <div class="col-md-10 col-sm-9 col-xs-12">
+                    <p class="icon-menu-mobile"><i class="fa fa-bars"></i></p>
+                    <div class="logo"><a asp-page="/Index" title="Hermes">HERMES</a></div>
+                    <nav class="mega-menu">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <ul class="nav navbar-nav" id="navbar">
+                            <li class="level1 active dropdown">
+                                <a asp-page="/Index" title="Home"><b>Главная</b></a>
+                            </li>
+                            <li class="level1 active dropdown">
+                            <a asp-page="/Catalog" title="Home"><b>Каталог</b></a>
+                            </li>
+                            <li class="level1 active dropdown">
+                                <a asp-page="/Diagramm" title="Home"><b>Диаграммы</b></a>
+                            </li>
+                            <li class="level1 active dropdown">
+                                <a asp-page="/About" title="Home"><b>О компании</b></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <!-- End container -->
+        </div>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <div class="border-bottom-home1 space-80">
+    </div>
+    <!-- End container -->
+    <div id="back-to-top">
+        <i class="fa fa-long-arrow-up"></i>
+    </div>
+    <footer id="footer">
+        <div class="bottom-home1 bottom-only-home1 footer-bt space-padding-tb-40">
+            <div class="container">
+                <!-- End col-md-3 -->
+
+                <div class="container">
+                    <div class="row footer-top">
+                        <div class="col-md-6">
+                            <h2>Hermes</h2>
+                            <p class="italic">Если эти часы остановятся, вызывайте врача: Вы не двигались семь дней.</p>
+                            <div class="infomation">
+                                <p><i class="fa fa-phone"></i>Telephone: +7 977 551 64 40</p>
+                                <p><i class="fa fa-envelope-o"></i>Email: honir220@gmail.com</p>
+                                <p><i class="fa fa-clock-o"></i>8:00 - 19:00, с Понедельника по Субботу, Воскресенье - выходной</p>
+                            </div>
+                           
+                        </div>
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- End container -->
+    </footer>
+
+    <!-- JS FILES -->
+    <script src="assets/js/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="assets/js/jquery.themepunch.plugins.min.js"></script>
+    <script src='assets/js/engo-plugins.js'></script>
+    <script src="assets/js/store.js"></script>
+    <!--
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    -->
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

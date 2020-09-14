@@ -1,0 +1,56 @@
+﻿@page
+
+@model Shop.Pages.AddProductModel
+@{
+    ViewData["Title"] = "AddProduct";
+}
+
+
+<form method="post" style="margin-top:20%;">
+    <div asp-validation-summary="All"></div>
+    <div>
+        <label>Название</label>
+        <div>
+            <input asp-for="Product.nameProduct" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <label>Цена</label>
+        <div>
+            <input asp-for="Product.priceProduct" type="number" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <label>Категория</label>
+        <div>
+            <input asp-for="Product.categoryProduct" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <label>Изображение</label>
+        <div>
+            <input asp-for="Product.imageProdusct" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <label>Показ</label>
+        <div>
+            <input asp-for="Product.previewProduct" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <label>Описание</label>
+        <div>
+            <input asp-for="Product.detailProduct" class="form-control" />
+
+        </div>
+    </div>
+    <div>
+        <input type="submit" value="Добавить" />
+    </div>
+</form>
